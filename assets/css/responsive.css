@@ -1,0 +1,145 @@
+/* MOBILE & TABLE */
+@media (max-width: 1023px) {
+:root {
+--header-height:80px;
+--navbar-height:0px;
+}
+
+.hide-on-mobile-table {
+    display: none;
+}
+
+.header {
+    position: fixed;
+    z-index: 9;
+    right: 0;
+    top: 0;
+    left: 0;
+}
+
+.header__cart-list {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    width: 100%;
+    padding: 0 calc((100% - 654px)/2);
+}
+
+.header__cart-list::after {
+    display: none;
+}
+
+.header__sort-bar {
+    display: flex;
+}
+
+.mobile-category {
+    display: flex;
+}
+
+.app__container {
+    margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+}
+
+.app__content {
+    padding-top:8px ;
+}
+}
+
+/* TABLE */
+@media (min-width: 740px) and (max-width: 1023px) {
+.hide-on-table {
+  display: none;  
+}   
+
+.header__cart {
+    width: 74px;
+    text-align: right;
+}
+}
+
+/* MOBILE */
+@media (max-width: 739px) {
+.hide-on-mobile {
+    display: none;
+}    
+
+.header-with-search {
+    justify-content: space-between;
+}
+
+.header__logo {
+    width: unset;
+}
+
+.header__cart {
+width: unset;
+padding: 0 30px;
+}
+
+.header__search {
+position: fixed;
+top:var(--header-height);
+width: 100%;
+z-index: 1;
+left: 0;
+height: 46px;
+box-shadow: 0 1px 4px 0 #cbbdbd;
+border: 1px solid #000;
+padding: 0 12px;
+display: none;
+animation: mobileSearch linear .3s ;
+}
+
+.header__logo-img {
+    width: 100px;
+}
+
+.header__search-hitory {
+position: fixed;
+z-index: 6;
+width: 100%;
+top: calc(var(--header-height) + var(--header-sort-bar-height));
+box-shadow: 0 1px 4px 0 #b1a3a3;    
+}
+
+.header__mobile-search-icon {
+    display: block;
+}
+
+.home-product__pagination {
+margin-top: 0;
+margin-bottom: 12px;
+}
+
+.pagination-item {
+margin: 0 2px;
+}
+
+.pagination-item__link {
+    font-size: 1.4rem;
+    max-width: 36px;
+}
+
+.app__content {
+margin-left: 4px;
+margin-right: 4px;
+}
+
+@keyframes mobileSearch {
+    from {
+        opacity: 0;
+        top: calc(var(--header-height) - 46px);
+
+    }
+    to  {
+        opacity: 1;
+        top:var(--header-height);
+
+    }
+}
+
+.wide.m-l-36 {
+    margin-left: 2%;
+}
+}
